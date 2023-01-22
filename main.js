@@ -166,9 +166,11 @@ const sr = ScrollReveal({  /* capital S in ScrollReveal */
     // reset: true   for repeat animation
 })
 
-sr.reveal(`.home__data, .projects__container, .footer__container`)
-sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100})
+sr.reveal(`.home__data, .projects__container`)
+sr.reveal(`.home__info div, .footer__container`, {delay: 600, origin: 'bottom', interval: 100})
 sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1), .qualification__img`, {origin: 'left'})
 sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2), .qualification__img2`, {origin: 'right'})
 sr.reveal(`.qualification__content, .services__card`, {interval: 200})
 
+// .set__opacity-1 is declared to show qr code of whatsapp...
+// two task remaining, download CV button and qr code shown when we hover the whatsapp name or write me link

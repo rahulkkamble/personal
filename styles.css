@@ -337,7 +337,7 @@ body.dark-theme {
 }
 
 .home__perfil img {
-    width: 220px;
+    width: 200px;
     /* padding-bottom: 1rem; */
 }
 
@@ -701,7 +701,9 @@ body.dark-theme {
 /* Swiper class */
 
 /*=========== CONTACT ============== */
-/* start here 1:42... */
+.contact__data img{
+    display: none;
+}
 .contact__container {
     row-gap: 3.5rem;
 }
@@ -815,6 +817,9 @@ body.dark-theme {
 
 .contact__form .contact__button {
     border: none;
+    /* border: 2px solid var(--text-color-light);
+    border-radius: 3rem;
+    padding: .8rem; */
     background: none;
     font-size: var(--h2-font-size);
     font-family: var(--title-font);
@@ -898,6 +903,11 @@ body.dark-theme {
     color: var(--text-color-light);
 }
 
+.contact__data .contact__data-title i{
+        font-size: var(--normal-font-size);
+        position: relative;
+        top: .2rem;
+    }
 /* ===== SCROLL BAR ===== */
 ::-webkit-scrollbar {
     width: .6rem;
@@ -1131,7 +1141,7 @@ body.dark-theme {
         border-radius: 10.6rem;
     }
     .home__perfil img{
-        width: 350px;
+        width: 380px;
     }
     .home__shapes-waves{
         width: 100px;
@@ -1153,7 +1163,7 @@ body.dark-theme {
         font-size: 1.5rem;
     }
     .home__info{
-        grid-template-rows: repeat(3, 130px);
+        grid-template-rows: 1fr .5fr .5fr;
     }
     .skills__container{
         column-gap: 10rem;
@@ -1265,6 +1275,22 @@ body.dark-theme {
     .footer__copy{
         margin-top: 5rem;
     }
+    .contact__data img{
+        display:flex;
+        position: absolute;
+        left: -15rem;
+        height: 200px;
+        border-radius: 3rem;
+        width: 200px;
+        top: 8rem;
+        opacity: 0;
+        transition: opacity .3s;
+        box-shadow: 0 4px 20px hsl(207, 24%, 35%, .15);
+    }
+    .set__opacity-1{
+        opacity: 1;
+    }
+    
 }
 
 /* Swiper class */
