@@ -172,5 +172,50 @@ sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1), .quali
 sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2), .qualification__img2`, {origin: 'right'})
 sr.reveal(`.qualification__content, .services__card`, {interval: 200})
 
-// .set__opacity-1 is declared to show qr code of whatsapp...
-// two task remaining, download CV button and qr code shown when we hover the whatsapp name or write me link
+const whatsappLink = document.getElementById("contact-whatsapp-link"),
+instagramLink = document.getElementById("contact-instagram-link"),
+qrCodeWhats = document.getElementById("qr-code-whatsapp"),
+qrCodeInsta = document.getElementById("qr-code-instagram");
+
+whatsappLink.addEventListener("mouseenter", ()=>{
+    qrCodeWhats.classList.add('show__qr');
+    console.log("mouseenter")
+    console.log(qrCode.className)
+})
+whatsappLink.addEventListener("mouseleave", ()=>{
+    qrCodeWhats.classList.remove('show__qr')
+    console.log("mouseleave")
+    console.log(qrCode.className)
+})
+instagramLink.addEventListener("mouseenter", ()=>{
+    qrCodeInsta.classList.add('show__qr');
+    console.log("mouseenter")
+})
+instagramLink.addEventListener("mouseleave", ()=>{
+    qrCodeInsta.classList.remove('show__qr')
+    console.log("mouseleave")
+})
+// task remaining, download CV button
+const homePerfilImg = document.getElementById("home-perfil-img"),
+    cvArea = document.getElementById("cv-area"),
+    cvButton = document.getElementById("home-perifil-cv-button");
+
+    homePerfilImg.addEventListener("mouseenter", ()=>{
+        cvButton.classList.add('show__cv-button');
+        console.log("mouseenter")
+    })
+    cvArea.addEventListener("mouseenter", ()=>{
+        cvButton.classList.add('show__cv-button');
+    })
+    cvArea.addEventListener("mouseleave", ()=>{
+        cvButton.classList.remove('show__cv-button');
+    })
+    homePerfilImg.addEventListener("mouseleave", ()=>{
+        cvButton.classList.remove('show__cv-button')
+        console.log("mouseleave")
+    })
+
+    // cvButton.addEventListener('click', (e)=> e.preventDefault())
+    
+
+

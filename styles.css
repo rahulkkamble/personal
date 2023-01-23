@@ -129,6 +129,7 @@ body.dark-theme {
 .dark-theme .home__shapes-waves,
 .dark-theme .home__shapes-circular-dots,
 .dark-theme .qualification__img,
+.dark-theme .skills__data .express-class img,
 .dark-theme .qualification__img2{
     filter: invert(1);
 }
@@ -149,6 +150,11 @@ body.dark-theme {
 }
 .dark-theme::-webkit-scrollbar-thumb:hover{
     background-color:hsl(207, 4%, 35%);
+}
+
+.dark-theme .home__perfil-cv-button{
+    color: rgba(0, 0, 0, 0.737);
+    box-shadow: 0 4px 15px var(--container-color);
 }
 
 /* =========================== RE-USABLE CSS CLASSES ======================== */
@@ -405,6 +411,9 @@ body.dark-theme {
     font-size: var(--h1-font-size);
     font-weight: var(--font-semi-bold);
 }
+.home__perfil-cv-button{
+    visibility: hidden;
+}
 
 /*=========== SKILLS ============== */
 .sills__container {
@@ -448,6 +457,7 @@ body.dark-theme {
     background-color: var(--container-color);
     border-radius: 3rem;
     place-items: center;
+    justify-self: center;
     margin-bottom: 1rem;
     transition: background .4s; /* dark theme animation */
 }
@@ -1134,6 +1144,7 @@ body.dark-theme {
         width: 400px;
         height: 580px;
         border-radius: 12.5rem;
+        /* z-index: 2; */
     }
     .home__perfil{
         width: 340px;
@@ -1141,14 +1152,18 @@ body.dark-theme {
         border-radius: 10.6rem;
     }
     .home__perfil img{
+        z-index: 1;
+        /* border: 2px solid red;  clickable area image */
         width: 380px;
     }
     .home__shapes-waves{
+        z-index: 10;
         width: 100px;
         left: -2rem;
         top: 9rem;
     }
     .home__shapes-circular-dots{
+        z-index: -10;
         width: 250px;
         bottom: -2rem;
         right: -6rem;
@@ -1164,6 +1179,9 @@ body.dark-theme {
     }
     .home__info{
         grid-template-rows: 1fr .5fr .5fr;
+    }
+    .home__info-description{
+        line-height: 1.5;
     }
     .skills__container{
         column-gap: 10rem;
@@ -1275,20 +1293,56 @@ body.dark-theme {
     .footer__copy{
         margin-top: 5rem;
     }
-    .contact__data img{
+    /* Extra */
+    #qr-code-whatsapp{
+        background-color: aqua;
         display:flex;
         position: absolute;
         left: -15rem;
         height: 200px;
         border-radius: 3rem;
         width: 200px;
-        top: 8rem;
-        opacity: 0;
+        top: 6.5rem;
         transition: opacity .3s;
+        opacity: 0;
         box-shadow: 0 4px 20px hsl(207, 24%, 35%, .15);
     }
-    .set__opacity-1{
-        opacity: 1;
+    #qr-code-instagram{
+        display:flex;
+        position: absolute;
+        left: -15rem;
+        height: 220px;
+        border-radius: 3rem;
+        width: 200px;
+        top: 15rem;
+        transition: opacity .3s;
+        opacity: 0;
+        box-shadow: 0 4px 20px hsl(207, 24%, 35%, .15);
+    }
+    .show__qr{
+        opacity: 1 !important;
+    }
+    .home__perfil-cv-button{
+        position: absolute;
+        visibility: visible;
+        background: var(--gradient-color);
+        padding: 1.3rem 1.2rem;
+        border-radius: 2rem;
+        z-index: 0;
+        top: 25rem;
+        border: none;
+        transition: top .3s, right .3s;
+        right: 5rem;
+        box-shadow: 0 4px 15px var(--text-color-light);
+    }
+    .show__cv-button{
+        z-index: 0;
+        text-decoration: none !important;
+        /* cursor: pointer !important; */
+        visibility: visible;
+        color: var(--text-color);
+        top: 16rem !important;
+        right: 2rem !important;
     }
     
 }

@@ -96,7 +96,13 @@
                     </h1>
                     <div class="home__blob grid">
                         <div class="home__perfil">
-                            <img src="./images/MyPics/2-2.png" alt="home perfil">
+                            <img src="./images/MyPics/2-2.png" id="home-perfil-img" alt="home perfil" usemap="#workmap">
+                            <map name="workmap">
+                                <area id="cv-area" shape="rect" coords="230,160,350,210" alt="DownloadCV" href="./resources/Rahul-Kishor-Kamble-Resume-CV.pdf" target="_blank">
+                            </map>
+                            <a href="./resources/resume.pdf" download="resume.pdf" class="home__perfil-cv-button" id="home-perifil-cv-button">
+                                    Download CV
+                            </a>
                         </div>
                         <img class="home__shapes-waves" src="./images/water-wave-icon.svg" alt="shapes waves">
                         <img class="home__shapes-circular-dots" src="./images/circular dots.png"
@@ -121,7 +127,8 @@
                             BIOGRAPHY
                         </h3>
                         <p class="home__info-description">
-                            Hi, <br>I'm Rahul Kishor Kamble, <br><br>I am a Computer Engineer, <br>I have been working on my skills in Web
+                            Hi, <br>I'm Rahul Kishor Kamble, <br>   I am a Computer Engineer, <br>I have been working
+                            on my skills in Web
                             Development. I have good knowledge of HTML5, CSS3, JS (ES6) and
                             also bootstrap framework. <br>Now I am working on react and database
                             (MongoDB). I like to upgrade myself and improve skills.
@@ -142,8 +149,10 @@
                             SERVICES
                         </h3>
                         <p class="home__info-description">
-                            Web Design <br>
-                            UI/UX design
+                            Smooth and Beautiful Web Design <br>
+                            Optimizing user experience<br>
+                            Customizable UI<br>
+                            Routing, API-based simple designs<br>
                         </p>
                     </div>
                 </div>
@@ -251,7 +260,7 @@
                             <div class="skills__blob">
                                 <img src="./images/Skills/bootstrap-5-1.svg" alt="extra skills images">
                             </div>
-                            <h3 class="skills__name">Bootstrap 4 & 5</h3>
+                            <h3 class="skills__name">Bootstrap</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
                         <div class="skills__data">
@@ -262,10 +271,17 @@
                             <span class="skills__subtitle">Basics</span>
                         </div>
                         <div class="skills__data">
+                            <div class="skills__blob express-class">
+                                <img src="./images/Skills/express-109.svg" alt="extra skills images">
+                            </div>
+                            <h3 class="skills__name">ExpressJS</h3>
+                            <span class="skills__subtitle">Basics</span>
+                        </div>
+                        <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="./images/Skills/adobe-photoshop-2.svg" alt="extra skills images">
                             </div>
-                            <h3 class="skills__name">Adobe Photoshop</h3>
+                            <h3 class="skills__name">Photoshop</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
                         <div class="skills__data">
@@ -375,9 +391,9 @@
                         Animator
                     </h2>
                     <p class="services__description">
-                        Service that provides the best quality and at
-                        the request of the client, with professional
-                        work and customer support.
+                        Service that provides the best try of animation
+                        in the websites for the Beautiful user interface
+                        and customer's satisfaction.
                     </p>
                     <div class="services__border"></div>
                 </div>
@@ -388,9 +404,10 @@
                         Video editor
                     </h2>
                     <p class="services__description">
-                        Service that provides the best quality and at
-                        the request of the client, with professional
-                        work and customer support.
+                        As a hobby, I love to do so. Editing provides
+                        the best cinematic, musical, commercial, informative
+                        videos. VFX can be used as per 
+                        consumer requirements.
                     </p>
                     <div class="services__border"></div>
                 </div>
@@ -407,7 +424,8 @@
                     <div class="swiper-wrapper">
                         <!-- ========= Project 1 ======== -->
                         <div class="projects__content swiper-slide">
-                            <img src="./images/project1-simple-image-editor.jpg" class="projects__img" alt="projects image">
+                            <img src="./images/project1-simple-image-editor.jpg" class="projects__img"
+                                alt="projects image">
                             <div>
                                 <span class="projects__subtitle">HTML, CSS, JavaScript</span>
                                 <h1 class="projects__title">Simple Image Editor</h1>
@@ -433,7 +451,8 @@
                             <div>
                                 <span class="projects__subtitle">Javascript, ExpressJS</span>
                                 <h1 class="projects__title">pdf-Merge-Tool</h1>
-                                <a href="https://rahulkkamble.github.io/PDFmerger/templates/index.html" class="projects__button">
+                                <a href="https://rahulkkamble.github.io/PDFmerger/templates/index.html"
+                                    class="projects__button">
                                     View Demo <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>
@@ -444,7 +463,8 @@
                             <div>
                                 <span class="projects__subtitle">HTML routing</span>
                                 <h1 class="projects__title">Restaurant Website</h1>
-                                <a href="https://rahulkkamble.github.io/HTML-CSS-Java-Script-for-web-developer/" class="projects__button">
+                                <a href="https://rahulkkamble.github.io/HTML-CSS-Java-Script-for-web-developer/"
+                                    class="projects__button">
                                     View Demo <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>
@@ -481,16 +501,18 @@
                         <div class="contact__data">
                             <span class="contact__data-title"><i class="ri-whatsapp-line"></i> Whatsapp </span>
                             <span class="contact__data-info">+91 7977115823</span>
-                            <img src="./images/my whatsapp qr code.png" alt="whatsapp QR">
+                            <img src="./images/my whatsapp qr code.png" id="qr-code-whatsapp" alt="whatsapp QR">
                             <a href="https://api.whatsapp.com/send?phone=917977115823&text=Hello, more Information!"
-                                target="_blank" class="contact__button whatsapp-link">
+                                target="_blank" class="contact__button whatsapp-link" id="contact-whatsapp-link">
                                 Write Me <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                         <div class="contact__data">
                             <span class="contact__data-title"><i class="ri-instagram-line"></i> Instagram</span>
                             <span class="contact__data-info"> @kamble_rk_1</span>
-                            <a href="personal portfolio" target="_blank" class="contact__button">
+                            <img src="./images/kamble_rahul_1_qr.png" id="qr-code-instagram" alt="">
+                            <a href="personal portfolio" target="_blank" class="contact__button"
+                                id="contact-instagram-link">
                                 Write Me <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
