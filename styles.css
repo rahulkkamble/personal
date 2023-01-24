@@ -412,7 +412,8 @@ body.dark-theme {
     font-weight: var(--font-semi-bold);
 }
 .home__perfil-cv-button{
-    visibility: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
 /*=========== SKILLS ============== */
@@ -1331,15 +1332,13 @@ body.dark-theme {
         z-index: 0;
         top: 25rem;
         border: none;
-        transition: top .3s, right .3s;
+        transition: top .3s, right .3s, display .3s;
         right: 5rem;
         box-shadow: 0 4px 15px var(--text-color-light);
     }
     .show__cv-button{
         z-index: 0;
         text-decoration: none !important;
-        /* cursor: pointer !important; */
-        visibility: visible;
         color: var(--text-color);
         top: 16rem !important;
         right: 2rem !important;
